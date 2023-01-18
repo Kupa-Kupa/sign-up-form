@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 :root {
     --footer-color: rgb(233, 227, 227);
     --heading-background-color: rgba(30, 25, 25, 0.3);
     --page-title-color: rgb(245, 218, 69);
+    --right-background-color: rgb(75, 103, 125);
+    --right-color: rgb(213, 227, 227);
+
+    --title-font: 'Old Standard TT', serif;
+    --page-font: 'Old Standard TT', serif;
 }
 
 * {
@@ -45,6 +53,7 @@ body {
 }
 
 .left-container .page-title h1{
+    font-family: var(--title-font);
     color: var(--page-title-color);
     font-size: 4rem;
 }
@@ -78,6 +87,34 @@ body {
     color: var(--footer-color);
 }
 
+
+
+/* Blurb and Sign-up form */
+
 .right-container {
+    background-color: var(--right-background-color);
+    color: var(--right-color);
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-container > div {
+    padding: 2rem;
+}
+
+.blurb p {
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 55ch;
+
+    margin-bottom: 15px;
+}
+
+.form-container form {
+    display: grid;
+
 }
