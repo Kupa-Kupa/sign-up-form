@@ -1,0 +1,83 @@
+:root {
+    --footer-color: rgb(233, 227, 227);
+    --heading-background-color: rgba(30, 25, 25, 0.3);
+    --page-title-color: rgb(245, 218, 69);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+}
+
+.left-container {
+    max-width: 600px;
+    text-align: center;
+    
+    background-image: url("../imgs/hero.jpg");
+    background-size: cover;
+    background-position: 70% 50%;
+
+
+    flex-direction: column;
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container .page-title {
+    margin-top: 220px;
+    background-color: var(--heading-background-color);
+
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left-container .page-title h1{
+    color: var(--page-title-color);
+    font-size: 4rem;
+}
+
+.left-container .page-title img{
+    max-height: 6rem;
+}
+
+/* It's easier to add this logo with img rather than ::before */
+
+/* .left-container .page-title h1::before {
+    content: "";
+    background-image: url("../imgs/odin-lined.png");
+    background-size: 100%;
+    display: inline-block;
+
+    height: 8rem;
+    width: 6rem;
+
+    position: relative;
+    right:20px;
+    top: 20px;
+} */
+
+.left-container footer {
+    color: var(--footer-color);
+    padding-bottom: 1rem;
+}
+
+.left-container footer a {
+    color: var(--footer-color);
+}
+
+.right-container {
+    flex: 1;
+}
