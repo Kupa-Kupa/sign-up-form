@@ -87,12 +87,17 @@
                         type="password"
                         name="password"
                         id="password"
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        pattern="(?=^.{8,}$)(?=.*\d)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                         title="Password must be at least 8 characters and 
                         contain: 1 capital letter, 1 lowercase letter and 
-                        1 number or 1 special character"
+                        1 number"
                         required>
-                    <div class="password-mismatch"></div>
+                    <div class="password-requirements">
+                        <span class="min-chars hidden">min 8 chars</span>
+                        <span class="num-spec hidden">1 number</span>
+                        <span class="capital hidden">1 capital char</span>
+                        <span class="lowercase hidden">1 lowercase char</span>
+                    </div>
                 </div>
 
                 <div>
@@ -101,11 +106,12 @@
                         type="password"
                         name="confirm-password"
                         id="confirm"
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        pattern="(?=^.{8,}$)(?=.*\d)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                         title="Password must be at least 8 characters and 
                         contain: 1 capital letter, 1 lowercase letter and 
-                        1 number or 1 special character"
+                        1 number"
                         required>
+                        <div class="password-mismatch hidden">Password doesn't match</div>
                 </div>
 
             </form>

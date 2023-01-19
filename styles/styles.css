@@ -134,7 +134,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.form-container form div {
+.form-container > form > div {
     display: flex;
     flex-direction: column;
 }
@@ -154,10 +154,36 @@ form label {
     font-size: 14px;
 }
 
-
-.form-container form .password-mismatch {
-    color: red;
+.form-container form .password-requirements {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
 }
+
+.form-container form .password-requirements, .form-container form .password-mismatch {
+    margin-top: 5px;
+    color: red;
+
+    max-width: 250px;
+    min-height: 1.25em;
+    line-height: 1.25;
+}
+
+form > div > div > span::before {
+    content: "\2022  "; /* add bullet point before requirement */
+}
+
+.matched {
+ color: rgb(55, 223, 55);
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/* Submit Button */
 
 button[type="submit"] {
     background-color: var(--page-title-color);
