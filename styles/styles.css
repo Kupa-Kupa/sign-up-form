@@ -201,3 +201,30 @@ button[type="submit"] {
     color: var(--page-title-color);
     font-weight: bold;
 }
+
+
+
+
+
+/* mobile view */
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        display: initial;
+    }
+
+    .left-container {
+        min-height: 30vh;
+        max-width: none;
+    }
+
+    .left-container .page-title {
+        margin-top: 160px;
+    }
+
+    .right-container {
+        min-height: 70vh;
+    }
+    
+}
